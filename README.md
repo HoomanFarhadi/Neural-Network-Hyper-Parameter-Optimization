@@ -12,6 +12,9 @@ This module defines hyper parameter tuning functions which can be used to tune a
 Then there is the innovated algorithm bin_search. This algorithm relies on the assumption that the hyper parameter sample space that it is searching in is practically convex and smooth, and uses a methodology similar to (albeit not the same as) a binary search to search the space exponentially faster than the grid_search algorithm. However note that the function that is being optimized here (the one that the binary search methodology is operating on) is f(x) where f is network_evaluate function and x is a value from
 
 ### Results
+The two tuning algorithms were compared by testing them on an abstract strategy game with varying parameters. Two scenerios were tested for each algorithm, one with 1% of the total data give and one with 10%. The grid search algorithm also varied in that it was given 4 subsections to search through when given 1% of the data but 8 to search through when given 10% of the data. The resulting neural network was then tested on the entire dataset and the overall accuracy was noted. The performance was as follows:
+
+* Given 1% of the data, the binary search innovated algorithm was able to find a network which yielded an average accuracy of
 
 <!-- Improvement using gradient descent with network_evaluate, perhaps heuristically combine methods -->
 <!-- Incomplete -->
